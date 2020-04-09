@@ -8,6 +8,7 @@ import { RepoComponent } from './repo/repo.component';
 import { UserComponent } from './user/user.component';
 import { UsersearchFormComponent } from './usersearch-form/usersearch-form.component';
 import { ReposearchFormComponent } from './reposearch-form/reposearch-form.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReposearchFormComponent } from './reposearch-form/reposearch-form.compo
     RepoComponent,
     UserComponent,
     UsersearchFormComponent,
-    ReposearchFormComponent
+    ReposearchFormComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

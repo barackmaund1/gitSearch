@@ -1,1 +1,19 @@
-<p>repo works!</p>
+ <div class="container">
+    <div class="row">
+         <div class="col-md-1"></div>
+         <div class="col-md-10">
+             <div class="all-card">
+                <div *ngFor='let repository of repo'>
+                    <div class="card-body four">
+                        <a href="{{repository.html_url}}"><h3 class="card-title">{{repository.name}}</h3></a>
+                        <p>{{repository.description}}</p>
+                        <button type="button" class="star" ><i class="fa fa-star"></i>star</button>
+                      
+                        <p><i class="fa fa-language"></i>&nbsp;{{repository.language}}</p>
+                        <p><i class="fa fa-clock-o"></i>&nbsp;{{repository.created_at}}</p>
+                   </div>
+                </div>
+            </div>
+         <div class="col-md-1"></div>
+    </div>
+</div> 

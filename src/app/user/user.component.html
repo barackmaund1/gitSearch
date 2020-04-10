@@ -1,30 +1,42 @@
 <div class="container">
    <div class="row">
-       <div class="col-md-2">
+       <div class="col-md-3">
            <div class="body-cady">
-               <img src="{{user.avatar_url}} " alt="">
+               <img src="{{user.avatar_url}} " alt="" class="img">
                <p  class="name"><i class="fa fa-user" style="font-size:20px"></i>&nbsp;{{user.login}}</p> 
                  <p>Created on:<span><i class="fa fa-clock-o"></i>&nbsp;{{user.created_at}}</span></p>
               <p>Updated on:<span><i class="fa fa-clock-o"></i>&nbsp;{{user.updated_at}}</span></p> 
                <a href="{{user.html_url}}"><i class="fa fa-github" ></i> &nbsp; <span>Github</span></a>
             </div>
        </div>
-       <div class="col-md-10">
-           <div class="container one">
-               <p>Overviews<span>{{user.public_gists}}</span></p>
-               <p>Repositories<span>{{user.public_repos}}</span></p>
-               <p>Followers<span>{{user.followers}}</span></p>
-               <p>following<span>{{user.following}}</span></p>
+       <div class="col-md-9">
+           <div class="one">
+               <div class="two">
+                   <p>Overviews<span class="three">{{user.public_gists}}</span></p>
+               </div>
+                <div class="two">
+                    <p>Repositories<span class="three">{{user.public_repos}}</span></p>
+                </div>
+                  <div class="two">
+                      <p>Followers<span class="three">{{user.followers}}</span></p>
+                  </div>
+                  <div class="two">
+                      <p>Following<span class="three">{{user.following}}</span></p>
+                 </div>
            </div>
            <hr>
            <div>
                <h2 class="text-center">Repositories</h2>
                <div class="allrepos">
                     <div class="card" *ngFor='let repository of repo'>
-                        <div class="card-body">
-                             <h3 class="card-title">{{repository.name}}</h3>
+                        <div class="card-body four">
+                            <a href="{{repository.html_url}}"><h3 class="card-title">{{repository.name}}</h3></a>
                             <p>{{repository.description}}</p>
-                            <p>{{repository.language}}</p>
+                            <button type="button" class="star" ><i class="fa fa-star"></i>star</button>
+                          
+                            <p><i class="fa fa-language"></i>&nbsp;{{repository.language}}</p>
+                            <p><i class="fa fa-clock-o"></i>&nbsp;{{repository.created_at}}</p>
+                        
                         </div>
                     </div>
                </div>

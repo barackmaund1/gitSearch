@@ -12,6 +12,7 @@ import { Component, OnInit,  } from '@angular/core';
 export class UserComponent implements OnInit {
 user:User;
 repo:Repo;
+
   constructor(public userService:ServiceService,public repoService:ServiceService) { }
 search(searchName){
   this.userService.searchUser(searchName).then(

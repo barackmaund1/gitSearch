@@ -1,4 +1,39 @@
+.container{
+    margin-top: 50px;
+}
 .one{
     display: flex;
     justify-content: center;
+}
+.img{
+    width:100%;
+    height:100% ;
+}
+.two{
+    margin:10Px ;
+    padding:15Px ;
+    border-bottom:5px solid #ffff43 ;
+    height:50px ;
+    width:200px ;
+}
+.three{
+    margin-left:15px ;
+}
+ .card{
+    width: 47%;
+    margin:10px ;
+ }
+.allrepos{
+    background-color: rgb(55, 63, 63);
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.card-title{
+font-weight: 800;
+}
+.star{
+    position: absolute;
+    top:5%;
+    left:88%;
 }

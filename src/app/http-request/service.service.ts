@@ -12,7 +12,7 @@ getUser:User;
 getRepos:Repo;
   constructor( private http:HttpClient) {
     this.getUser=new User("","","","","","","",0,0,0,0,"",new Date,new Date)
-     this.getRepos=new Repo("","","","",0,0,"",new Date)
+     this.getRepos=new Repo("","","","","",0,0,"",new Date)
   }
 searchUser(searchName:string){
   interface Response{
@@ -49,7 +49,8 @@ searchUser(searchName:string){
 getReposi(searchName){
  interface Repo{
   name:string;
-  full_name:string
+  full_name:string;
+  url:string;
   html_url:string;
   description:string;
   forks:number;

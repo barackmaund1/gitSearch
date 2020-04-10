@@ -1,15 +1,20 @@
 export class User {
     static result:any;
     constructor( 
-        public name:string,
-        public user_url:string,
-        public repo_num:number,
-        public overview:number,
-        public projects:number,
-        public followers:number,
-        public following:number,
-        public avatar_url:string,
-        public updated:Date )
+     public  url:string,
+     public login: string,
+     public html_url:string,
+    public followers_url:string,
+    public follolling_url:string,
+    public repos_url:string,
+    public starred_url:string,
+    public public_gists:number,
+     public  public_repos:number,
+     public followers:number,
+      public following:number,
+     public avatar_url:string,
+      public created_at:Date,
+      public updated_at:Date )
         {
  }
 }

@@ -1,7 +1,8 @@
 import { ServiceService } from './../http-request/service.service';
 import { Repo } from './../repo-class/repo';
 import { User } from './../user-class/user';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  } from '@angular/core';
+
 
 @Component({
   selector: 'app-user',

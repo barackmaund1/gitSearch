@@ -12,7 +12,7 @@ getUser:User;
 getRepos:Repo;
   constructor( private http:HttpClient) {
     this.getUser=new User("","","","","","","",0,0,0,0,"",new Date,new Date)
-     this.getRepos=new Repo("","","",0,0,"",new Date)
+     this.getRepos=new Repo("","","","",0,0,"",new Date)
   }
 searchUser(searchName:string){
   interface Response{
@@ -49,6 +49,7 @@ searchUser(searchName:string){
 getReposi(searchName){
  interface Repo{
   name:string;
+  full_name:string
   html_url:string;
   description:string;
   forks:number;
@@ -57,13 +58,13 @@ getReposi(searchName){
   created_at:Date;
  }
  return new Promise((resolve,reject)=>{
-   this.http.get<Repo>('https:api.github.com/users/'+searchName+'/repo?order+created&sort=asc?access_token='+environment.apiKey).toPromise().then(
+   this.http.get<Repo>('https:api.github.com/users/'+searchName+'/repos?order=created&sort=asc?access_token='+environment.apiKey).toPromise().then(
      (results)=>{
        this.getRepos=results;
        resolve();
      },
      (error)=>{
-       console.log(error);
+       console.log("check the error above");
        reject()
      }
    )

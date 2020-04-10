@@ -4,16 +4,30 @@
            <div class="body-cady">
                <img src="{{user.avatar_url}} " alt="">
                <p  class="name"><i class="fa fa-user" style="font-size:20px"></i>&nbsp;{{user.login}}</p> 
-               <p><i class="fa fa-time"></i>&nbsp;{{user.created_at |datePipe}}</p>
+                 <p>Created on:<span><i class="fa fa-clock-o"></i>&nbsp;{{user.created_at}}</span></p>
+              <p>Updated on:<span><i class="fa fa-clock-o"></i>&nbsp;{{user.updated_at}}</span></p> 
                <a href="{{user.html_url}}"><i class="fa fa-github" ></i> &nbsp; <span>Github</span></a>
             </div>
        </div>
        <div class="col-md-10">
-           <div class="container-fluid one">
-               <div></div>
-               <div></div>
-               <div></div>
-               <div></div>
+           <div class="container one">
+               <p>Overviews<span>{{user.public_gists}}</span></p>
+               <p>Repositories<span>{{user.public_repos}}</span></p>
+               <p>Followers<span>{{user.followers}}</span></p>
+               <p>following<span>{{user.following}}</span></p>
+           </div>
+           <hr>
+           <div>
+               <h2 class="text-center">Repositories</h2>
+               <div class="allrepos">
+                    <div class="card" *ngFor='let repository of repo'>
+                        <div class="card-body">
+                             <h3 class="card-title">{{repository.name}}</h3>
+                            <p>{{repository.description}}</p>
+                            <p>{{repository.language}}</p>
+                        </div>
+                    </div>
+               </div>
            </div>
        </div>
    </div>

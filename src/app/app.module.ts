@@ -11,6 +11,8 @@ import { ReposearchFormComponent } from './reposearch-form/reposearch-form.compo
 import { NotFoundComponent } from './not-found/not-found.component'
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { PipePipe } from './pipe.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormsModule } from '@angular/forms';
     UserComponent,
     UsersearchFormComponent,
     ReposearchFormComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PipePipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

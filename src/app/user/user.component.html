@@ -1,1 +1,20 @@
-
+<div class="container">
+   <div class="row">
+       <div class="col-md-2">
+           <div class="body-cady">
+               <img src="{{user.avatar_url}} " alt="">
+               <p  class="name"><i class="fa fa-user" style="font-size:20px"></i>&nbsp;{{user.login}}</p> 
+               <p><i class="fa fa-time"></i>&nbsp;{{user.created_at |datePipe}}</p>
+               <a href="{{user.html_url}}"><i class="fa fa-github" ></i> &nbsp; <span>Github</span></a>
+            </div>
+       </div>
+       <div class="col-md-10">
+           <div class="container-fluid one">
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+           </div>
+       </div>
+   </div>
+</div>

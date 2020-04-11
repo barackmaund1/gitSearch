@@ -13,7 +13,6 @@ const routes: Routes = [
 { path: '', redirectTo:"/user", pathMatch:"full"},
   
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

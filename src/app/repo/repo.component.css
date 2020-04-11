@@ -1,0 +1,20 @@
+.fa{
+    display: flex;
+}
+.repo4{
+
+    margin-right: 2px;
+    width:200px ;
+    display: flex;
+}
+.five{
+    margin-right:20px ;
+    color: rgb(134, 134, 66);
+   
+}
+ .star1{
+    float: right; 
+    border-radius:80% ;
+    color: rgb(131, 84, 67);
+    
+} 

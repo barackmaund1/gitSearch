@@ -8,6 +8,11 @@ import { RepoComponent } from './repo/repo.component';
 import { UserComponent } from './user/user.component';
 import { UsersearchFormComponent } from './usersearch-form/usersearch-form.component';
 import { ReposearchFormComponent } from './reposearch-form/reposearch-form.component';
+import { NotFoundComponent } from './not-found/not-found.component'
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { PipePipe } from './pipe.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -16,11 +21,17 @@ import { ReposearchFormComponent } from './reposearch-form/reposearch-form.compo
     RepoComponent,
     UserComponent,
     UsersearchFormComponent,
-    ReposearchFormComponent
+    ReposearchFormComponent,
+    NotFoundComponent,
+    PipePipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

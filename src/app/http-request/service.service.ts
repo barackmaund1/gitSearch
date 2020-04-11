@@ -1,9 +1,74 @@
+import { environment } from './../../environments/environment';
+import { Repo } from './../repo-class/repo';
+import { User } from './../user-class/user';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
+getUser:User;
+getRepos:Repo;
+  constructor( private http:HttpClient) {
+    this.getUser=new User("","","","","","","",0,0,0,0,"",new Date,new Date)
+     this.getRepos=new Repo("","","","","",0,0,"",new Date)
+  }
+searchUser(searchName:string){
+  interface Response{
+    url:string;
+    login: string;
+    html_url:string;
+    followers_url:string;
+    follolling_url:string;
+    repos_url:string;
+    starred_url:string;
+    public_gists:number;
+     public_repos:number;
+     followers:number;
+     following:number;
+     avatar_url:string;
+      created_at:Date;
+      updated_at:Date;
+  }
 
-  constructor() { }
+  return new Promise((resolve,reject)=>{
+    this.http.get<Response>('https://api.github.com/users/'+searchName+'?access_token='+environment.apiKey).toPromise().then( 
+      (result)=>{
+        this.getUser=result;
+        console.log(this.getUser);
+        resolve()
+      },
+      (error)=>{
+        console.log(error);
+        reject();
+      }
+    )
+  })
 }
+getReposi(searchName){
+ interface Repo{
+  name:string;
+  full_name:string;
+  url:string;
+  html_url:string;
+  description:string;
+  forks:number;
+  watchers_count:number;
+  language:string;
+  created_at:Date;
+ }
+ return new Promise((resolve,reject)=>{
+   this.http.get<Repo>('https:api.github.com/users/'+searchName+'/repos?order=created&sort=asc?access_token='+environment.apiKey).toPromise().then(
+     (results)=>{
+       this.getRepos=results;
+       resolve();
+     },
+     (error)=>{
+       console.log("check the error above");
+       reject()
+     }
+   )
+ })
+}
+} 

@@ -1,5 +1,9 @@
 .container{
-    margin-top: 50px;
+    margin-top: 65px;
+}
+.form{
+ position: absolute;
+ top:80px ;
 }
 .one{
     display: flex;
@@ -22,12 +26,20 @@
  .card{
     width: 47%;
     margin:10px ;
+    box-sizing: border-box;
+    box-shadow:2px 2px 2px silver ;
+    border-radius:5% ;
+ }
+ .card:hover{
+     background-color: gainsboro;
  }
 .allrepos{
-    background-color: rgb(55, 63, 63);
     display: flex;
     flex-wrap: wrap;
    
+}
+.allrepos:hover{
+    background-color:cornsilk;
 }
 .card-title{
 font-weight: 800;
@@ -36,4 +48,38 @@ font-weight: 800;
     position: absolute;
     top:5%;
     left:88%;
+    border-radius:50% ;
+    color: rgb(131, 84, 67);
+    
+}
+.date{
+    color: darkgreen;
+}
+.line{
+    display: flex;
+}
+.repo{
+    margin:0 7px 0 7px ;
+    
+    outline: none;
+}
+ #one{
+    
+    color:yellowgreen;
+} 
+.name{
+    font-size:30px ;
+    color: rgb(41, 54, 41);
+    font-weight:600 ;
+}
+.name:hover{
+    color: rgb(56, 90, 56); ;
+}
+.git{
+   font-size:22px ; 
+   font-weight: 700;
+
+}
+.repo1{
+    color: rgb(131, 84, 67);
 }

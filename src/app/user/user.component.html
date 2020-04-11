@@ -1,15 +1,15 @@
-<app-usersearch-form (searchOutput)= "search($event)"></app-usersearch-form>
+
 <div class="container">
-    
+    <app-usersearch-form (searchOutput)= "search($event)" class="form"></app-usersearch-form> 
    <div class="row">
       
        <div class="col-md-3">
            <div class="body-cady">
                <img src="{{user.avatar_url}} " alt="" class="img">
                <p  class="name"><i class="fa fa-user" style="font-size:20px"></i>&nbsp;{{user.login}}</p> 
-                 <p>Created on:<span><i class="fa fa-clock-o"></i>&nbsp;{{user.created_at}}</span></p>
-              <p>Updated on:<span><i class="fa fa-clock-o"></i>&nbsp;{{user.updated_at}}</span></p> 
-               <a href="{{user.html_url}}"><i class="fa fa-github" ></i> &nbsp; <span>Github</span></a>
+                 <p>Created:<span><i class="fa fa-clock-o date"></i>&nbsp;{{user.created_at|pipe}}</span></p>
+              <p>Updated:<span><i class="fa fa-clock-o date"></i>&nbsp;{{user.updated_at|date}}</span></p> 
+               <a href="{{user.html_url}}" class="git"><i class="fa fa-github" ></i> &nbsp; <span>Github</span></a>
             </div>
        </div>
        <div class="col-md-9">
@@ -36,14 +36,16 @@
                             <a href="{{repository.html_url}}"><h3 class="card-title">{{repository.name}}</h3></a>
                             <p>{{repository.description}}</p>
                             <button type="button" class="star" ><i class="fa fa-star"></i>star</button>
-                          
-                            <p><i class="fa fa-language"></i>&nbsp;{{repository.language}}</p>
-                            <p><i class="fa fa-clock-o"></i>&nbsp;{{repository.created_at}}</p>
-                        
+                                <div class="line">
+                                    <p class="repo1"><i class="fa fa-language"></i>&nbsp;{{repository.language}}</p>
+                                    <p class="repo"><i class="fa fa-code-fork" aria-hidden="true" id="one"></i>&nbsp;{{repository.forks}}</p>
+                                    <p class="repo2">Updated:<i class="fa fa-clock-o date "></i>&nbsp;{{repository.created_at|pipe}}</p>
+                                </div>
+                            
                         </div>
                     </div>
                </div>
            </div>
        </div>
-   </div>
+    </div>
 </div>

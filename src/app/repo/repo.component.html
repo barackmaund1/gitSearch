@@ -7,10 +7,15 @@
                     <div class="card-body four">
                         <a href="{{repository.html_url}}"><h3 class="card-title">{{repository.name}}</h3></a>
                         <p>{{repository.description}}</p>
-                        <button type="button" class="star" ><i class="fa fa-star"></i>star</button>
-                      
-                        <p><i class="fa fa-language"></i>&nbsp;{{repository.language}}</p>
-                        <p><i class="fa fa-clock-o"></i>&nbsp;{{repository.created_at}}</p>
+                        <button type="button" class="star1" ><i class="fa fa-star"></i>star</button>
+                          <div class="fa">
+                            <p class="repo4"><i class="fa fa-eye five"></i>&nbsp;{{repository.watchers_count}}</p>
+                            <p class="repo4"><i class="fa fa-language five"></i>&nbsp;{{repository.language}}</p>
+                            <p class="repo4"><i class="fa fa-code-fork five" aria-hidden="true" id="one"></i>&nbsp;{{repository.forks}}</p>
+                            <p class="repo4"><i class="fa fa-clock-o five"></i>&nbsp;{{repository.created_at|pipe}}</p>
+                           
+                          </div>
+                        <hr>
                    </div>
                 </div>
             </div>

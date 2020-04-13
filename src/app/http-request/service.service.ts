@@ -56,6 +56,7 @@ getReposi(searchName){
    this.http.get<Repo>('https:api.github.com/users/'+searchName+ "/repos?order=created&sort=asc?access_token=" + environment.apiKey).toPromise().then(
      (results)=>{
        this.getRepos=results;
+       console.log(this.getRepos)
        resolve();
      },
      (error)=>{

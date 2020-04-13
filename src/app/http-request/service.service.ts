@@ -43,7 +43,7 @@ searchUser(searchName:string){
   })
 }
 getReposi(searchName){
- interface Repo{
+ interface Response{
   name:string;
   html_url:string;
   description:string;
@@ -53,7 +53,7 @@ getReposi(searchName){
   created_at:Date;
  }
  return new Promise((resolve,reject)=>{
-   this.http.get<Repo>('https:api.github.com/users/'+searchName+ "/repos?order=created&sort=asc?access_token=" + environment.apiKey).toPromise().then(
+   this.http.get<Response>('https:api.github.com/users/'+searchName+ "/repos?order=created&sort=asc?access_token=" + environment.apiKey).toPromise().then(
      (results)=>{
        this.getRepos=results;
        console.log(this.getRepos)

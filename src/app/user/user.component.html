@@ -1,5 +1,6 @@
 
 <div class="container">
+    <ng-progress></ng-progress>
     <app-usersearch-form (searchOutput)= "search($event)" class="form"></app-usersearch-form> 
    <div class="row">
       
@@ -18,7 +19,7 @@
                    <p>Overviews<span class="three">{{user.public_gists}}</span></p>
                </div>
                 <div class="two">
-                    <p>Repositories<span class="three">{{user.public_repos}}</span></p>
+                    <a routerLink="/repo" ><p>Repositories<span class="three">{{user.public_repos}}</span></p></a>
                 </div>
                   <div class="two">
                       <p>Followers<span class="three">{{user.followers}}</span></p>

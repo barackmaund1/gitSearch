@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PipePipe } from './pipe.pipe';
 import { HighlightDirective } from './highlight.directive';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { HighlightDirective } from './highlight.directive';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-  
+    NgProgressModule.forRoot(),
+    NgProgressHttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

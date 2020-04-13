@@ -12,18 +12,13 @@ export class ServiceService {
 getUser:User;
 getRepos:Repo;
   constructor( private http:HttpClient) {
-    this.getUser=new User("","","","","","","",0,0,0,0,"",new Date,new Date)
-     this.getRepos=new Repo("","","","","",0,0,"",new Date)
+    this.getUser=new User('','',0,0,0,0,'',new Date,new Date)
+     this.getRepos=new Repo('','','',0,0,'',new Date)
   }
 searchUser(searchName:string){
   interface Response{
-    url:string;
     login: string;
     html_url:string;
-    followers_url:string;
-    follolling_url:string;
-    repos_url:string;
-    starred_url:string;
     public_gists:number;
      public_repos:number;
      followers:number;
@@ -50,8 +45,6 @@ searchUser(searchName:string){
 getReposi(searchName){
  interface Repo{
   name:string;
-  full_name:string;
-  url:string;
   html_url:string;
   description:string;
   forks:number;

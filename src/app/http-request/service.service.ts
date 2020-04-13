@@ -65,7 +65,7 @@ getReposi(searchName){
        resolve();
      },
      (error)=>{
-       console.log("check the error above");
+       console.log("error");
        reject()
      }
    )

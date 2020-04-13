@@ -3,7 +3,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RepoComponent } from './repo/repo.component';
 import { NgModule, } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 const routes: Routes = [
   {path:'user',component:UserComponent},
@@ -14,7 +14,7 @@ const routes: Routes = [
   
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),HttpClientInMemoryWebApiModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

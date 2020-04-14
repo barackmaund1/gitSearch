@@ -24,8 +24,8 @@ search(searchName){
     }
   );
   this.repoService.getReposi(searchName).then(
-    (results)=>{
-      this.repo=this.repoService.getRepos
+    ()=>{
+      this.repo=this.repoService.getRepos;
       console.log(this.repo);
     },
     (error)=>{
